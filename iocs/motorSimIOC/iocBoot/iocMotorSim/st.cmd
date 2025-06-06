@@ -1,4 +1,4 @@
-#!../../bin/linux-x86_64/motorSim
+#!../../bin/rhel9-x86_64/motorSim
 # The is the ASYN example for communication to 4 simulated motors
 # "#!" marks lines that can be uncommented.
 

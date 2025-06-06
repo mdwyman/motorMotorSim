@@ -1,22 +1,21 @@
 file "$(MOTOR)/db/basic_asyn_motor.db"
 {
 pattern
-{P,     N,  M,        DTYP,         PORT,       ADDR,  DESC,          EGU,      DIR,  VELO,  VBAS,  ACCL,  BDST,  BVEL,  BACC,  MRES,  PREC,  DHLM,  DLLM,  INIT}
-{IOC:,  1,  "m$(N)",  "asynMotor",  motorSim1,  0,     "motor $(N)",  degrees,  Pos,  1,     .1,    .2,    0,     1,     .2,    0.01,  5,     100,   -100,  ""}
-{IOC:,  2,  "m$(N)",  "asynMotor",  motorSim1,  1,     "motor $(N)",  degrees,  Pos,  1,     .1,    .2,    0,     1,     .2,    0.01,  5,     100,   -100,  ""}
-{IOC:,  3,  "m$(N)",  "asynMotor",  motorSim1,  2,     "motor $(N)",  degrees,  Pos,  1,     .1,    .2,    0,     1,     .2,    0.01,  5,     100,   -100,  ""}
-{IOC:,  4,  "m$(N)",  "asynMotor",  motorSim1,  3,     "motor $(N)",  degrees,  Pos,  1,     .1,    .2,    0,     1,     .2,    0.01,  5,     100,   -100,  ""}
-{IOC:,  5,  "m$(N)",  "asynMotor",  motorSim1,  4,     "motor $(N)",  degrees,  Pos,  1,     .1,    .2,    0,     1,     .2,    0.01,  5,     100,   -100,  ""}
-{IOC:,  6,  "m$(N)",  "asynMotor",  motorSim1,  5,     "motor $(N)",  degrees,  Pos,  1,     .1,    .2,    0,     1,     .2,    0.01,  5,     100,   -100,  ""}
-{IOC:,  7,  "m$(N)",  "asynMotor",  motorSim1,  6,     "motor $(N)",  degrees,  Pos,  1,     .1,    .2,    0,     1,     .2,    0.01,  5,     100,   -100,  ""}
-{IOC:,  8,  "m$(N)",  "asynMotor",  motorSim1,  7,     "motor $(N)",  degrees,  Pos,  1,     .1,    .2,    0,     1,     .2,    0.01,  5,     100,   -100,  ""}
-
-{IOC:,  9,  "m$(N)",  "asynMotor",  motorSim1,  8,     "motor $(N)",  degrees,  Pos,  1,     .1,    .2,    0,     1,     .2,    0.01,  5,     100,   -100,  ""}
-{IOC:,  10,  "m$(N)",  "asynMotor",  motorSim1,  9,     "motor $(N)",  degrees,  Pos,  1,     .1,    .2,    0,     1,     .2,    0.01,  5,     100,   -100,  ""}
-{IOC:,  11,  "m$(N)",  "asynMotor",  motorSim1,  10,     "motor $(N)",  degrees,  Pos,  1,     .1,    .2,    0,     1,     .2,    0.01,  5,     100,   -100,  ""}
-{IOC:,  12,  "m$(N)",  "asynMotor",  motorSim1,  11,     "motor $(N)",  degrees,  Pos,  1,     .1,    .2,    0,     1,     .2,    0.01,  5,     100,   -100,  ""}
-{IOC:,  13,  "m$(N)",  "asynMotor",  motorSim1,  12,     "motor $(N)",  degrees,  Pos,  1,     .1,    .2,    0,     1,     .2,    0.01,  5,     100,   -100,  ""}
-{IOC:,  14,  "m$(N)",  "asynMotor",  motorSim1,  13,     "motor $(N)",  degrees,  Pos,  1,     .1,    .2,    0,     1,     .2,    0.01,  5,     100,   -100,  ""}
-{IOC:,  15,  "m$(N)",  "asynMotor",  motorSim1,  14,     "motor $(N)",  degrees,  Pos,  1,     .1,    .2,    0,     1,     .2,    0.01,  5,     100,   -100,  ""}
-{IOC:,  16,  "m$(N)",  "asynMotor",  motorSim1,  15,     "motor $(N)",  degrees,  Pos,  1,     .1,    .2,    0,     1,     .2,    0.01,  5,     100,   -100,  ""}
+{P,     N,  M,        DTYP,         PORT,       ADDR,  DESC,          EGU,      DIR,  VELO,  VBAS,  ACCL,  BDST,  BVEL,  BACC,  MRES,  PREC,  DHLM,  DLLM,  INIT, FLNK}
+{100id:hkl_mot:,  1,  "m$(N)",  "asynMotor",  motorSim1,  0,     "motor $(N)",  degrees,  Pos,  1,     .1,    .2,    0,     1,     .2,    0.01,  5,     100,   -100,  "", "100id:ioc-hkl:omega_e4c.PROC"}
+{100id:hkl_mot:,  2,  "m$(N)",  "asynMotor",  motorSim1,  1,     "motor $(N)",  degrees,  Pos,  1,     .1,    .2,    0,     1,     .2,    0.01,  5,     100,   -100,  "", "100id:ioc-hkl:chi_e4c.PROC"}
+{100id:hkl_mot:,  3,  "m$(N)",  "asynMotor",  motorSim1,  2,     "motor $(N)",  degrees,  Pos,  1,     .1,    .2,    0,     1,     .2,    0.01,  5,     100,   -100,  "", "100id:ioc-hkl:phi_e4c.PROC"}
+{100id:hkl_mot:,  4,  "m$(N)",  "asynMotor",  motorSim1,  3,     "motor $(N)",  degrees,  Pos,  1,     .1,    .2,    0,     1,     .2,    0.01,  5,     100,   -100,  "",  "100id:ioc-hkl:tth_e4c.PROC"}
+{100id:hkl_mot:,  5,  "m$(N)",  "asynMotor",  motorSim1,  4,     "motor $(N)",  degrees,  Pos,  1,     .1,    .2,    0,     1,     .2,    0.01,  5,     100,   -100,  "", "100id:ioc-hkl:none1"}
+{100id:hkl_mot:,  6,  "m$(N)",  "asynMotor",  motorSim1,  5,     "motor $(N)",  degrees,  Pos,  1,     .1,    .2,    0,     1,     .2,    0.01,  5,     100,   -100,  "", "100id:ioc-hkl:none2"}
+{100id:hkl_mot:,  7,  "m$(N)",  "asynMotor",  motorSim1,  6,     "motor $(N)",  degrees,  Pos,  1,     .1,    .2,    0,     1,     .2,    0.01,  5,     100,   -100,  "", "100id:ioc-hkl:none3"}
+{100id:hkl_mot:,  8,  "m$(N)",  "asynMotor",  motorSim1,  7,     "motor $(N)",  degrees,  Pos,  1,     .1,    .2,    0,     1,     .2,    0.01,  5,     100,   -100,  "", "100id:ioc-hkl:none4"}
+{100id:hkl_mot:,  9,  "m$(N)",  "asynMotor",  motorSim1,  8,     "motor $(N)",  degrees,  Pos,  1,     .1,    .2,    0,     1,     .2,    0.01,  5,     100,   -100,  "", "100id:ioc-hkl:none5"}
+{100id:hkl_mot:,  10,  "m$(N)",  "asynMotor",  motorSim1,  9,     "motor $(N)",  degrees,  Pos,  1,     .1,    .2,    0,     1,     .2,    0.01,  5,     100,   -100,  "", "100id:ioc-hkl:none6"}
+{100id:hkl_mot:,  11,  "m$(N)",  "asynMotor",  motorSim1,  10,     "motor $(N)",  degrees,  Pos,  1,     .1,    .2,    0,     1,     .2,    0.01,  5,     100,   -100,  "", "100id:ioc-hkl:none7"}
+{100id:hkl_mot:,  12,  "m$(N)",  "asynMotor",  motorSim1,  11,     "motor $(N)",  degrees,  Pos,  1,     .1,    .2,    0,     1,     .2,    0.01,  5,     100,   -100,  "", "100id:ioc-hkl:none8"}
+{100id:hkl_mot:,  13,  "m$(N)",  "asynMotor",  motorSim1,  12,     "motor $(N)",  degrees,  Pos,  1,     .1,    .2,    0,     1,     .2,    0.01,  5,     100,   -100,  "", "100id:ioc-hkl:none9"}
+{100id:hkl_mot:,  14,  "m$(N)",  "asynMotor",  motorSim1,  13,     "motor $(N)",  degrees,  Pos,  1,     .1,    .2,    0,     1,     .2,    0.01,  5,     100,   -100,  "", "100id:ioc-hkl:none10"}
+{100id:hkl_mot:,  15,  "m$(N)",  "asynMotor",  motorSim1,  14,     "motor $(N)",  degrees,  Pos,  1,     .1,    .2,    0,     1,     .2,    0.01,  5,     100,   -100,  "", "100id:ioc-hkl:none11"}
+{100id:hkl_mot:,  16,  "m$(N)",  "asynMotor",  motorSim1,  15,     "motor $(N)",  degrees,  Pos,  1,     .1,    .2,    0,     1,     .2,    0.01,  5,     100,   -100,  "", "100id:ioc-hkl:none12"}
 }
